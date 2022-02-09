@@ -1,48 +1,83 @@
-パーシステンス設定
+クライアントからのアクセス
 ======================================
 
-| ロードバランシングメソッドに従って1つのサーバに振り分けられた後、継続して同じサーバへアクセスしたい、という要望があります (例: 買い物系サイト，インターネットバンキング)。このような要望を実現する機能をパーシステンスと呼びます。
-| 
-| 本ガイドでは、送信元IPアドレスパーシステンスとCookieのパーシステンス設定を行います。
+| CONSOLE又はRDPで、クライアントPCにログインします (ID/Passwordは両方ともuserです)。
+| SSL-VPN接続には、専用のクライアントソフトウェア (Edge Client)を利用した方法と、Webブラウザからアクセスする方式(F5 Helper Application)の2種類あります。
+| ここでは、Webブラウザから接続する方法を試します。
 
-送信元IPアドレスによるパーシスタンス
+WindowsのWebブラウザからのアクセス
 --------------------------------------
 
-- 「Local Traffic」 → 「Virtual Servers」で表示されたバーチャルサーバ：http-vs-001を選択し、Resourcesタブをクリックすると、以下の画面が表示されます。
-- 以下のように設定します。
+| クライアントPCのWebブラウザから、設定したVirtual Server (10.1.10.60)へアクセスします。
+| Windows 10 + Chromeを使った場合の例です。
 
-.. figure:: images/mod5-2-1.png
+- BIG-IPが持つデフォルトのサーバ証明書は、正式な認証局で取得したものではないため、クライアントPCのWebブラウザでVirtual Serverへアクセスすると以下のような警告が出ます。「詳細設定」→「10.1.10.60にアクセスする (安全ではありません)」を選択してアクセスします。
+
+.. figure:: images/mod5-2-1-1.png
    :scale: 20%
    :align: center
 
-.. _label:
+- 認証フォーム画面が現れますので、Active Directoryに登録されているユーザ名とパスワードを入力します。
 
-クライアントからのHTTPアクセス
---------------------------------------
-
-テスト用クライアントから、作成したVirtual ServerへWebブラウザでアクセスし、Web画面が表示されることを確認します。Staticticsを見て、負荷分散されずに同じサーバへのみ振り分けられていることを確認します。
-
-Cookieによるパーシスタンス
---------------------------------------
-
-以下のように設定します。
-
-.. figure:: images/mod5-2-3.png
+.. figure:: images/mod5-2-1-2.png
    :scale: 20%
    :align: center
 
-クライアントからのHTTPアクセス
---------------------------------------
+- 初回アクセス時には、SSL-VPNクライアント用のクライアントコンポーネントをインストールする必要があります。ダウンロードボタンを押して、実行します。 (インストールには管理者権限が必要となります。) インストールが完了後、”ここをクリックしてください。”をクリックします。
 
-:ref:`label` と同内容を確認し、ブラウザの設定でcookieが登録されていることを確認します。
-
-.. figure:: images/mod5-2-4.png
+.. figure:: images/mod5-2-1-3.png
    :scale: 20%
    :align: center
 
-**＜参考＞ Chrome v95の場合の確認手順**
+- 「F5 Network VPNを開く」を選択して、ブラウザの信頼済みサイトのセキュリティ警告を許可します。
 
-設定 > プライバシーとセキュリティ > Cookieと他のサイトデータ > すべてのCookieとサイトデータを表示
+.. figure:: images/mod5-2-1-4.png
+   :scale: 20%
+   :align: center
+
+.. figure:: images/mod5-2-1-5.png
+   :scale: 20%
+   :align: center
+
+- BIG-IPが持つデフォルトのサーバ証明書が、正式な認証局で取得したものではない事を示す警告が再度表示されるため、「はい」を選択します。
+
+.. figure:: images/mod5-2-1-6.png
+   :scale: 20%
+   :align: center
+
+- F5 Networksコンポーネントインストーラの利用を許可します。 (Windowsのユーザアカウント制御の設定によって、表示の有無が変わります。)
+
+.. figure:: images/mod5-2-1-7.png
+   :scale: 20%
+   :align: center
+
+- 再度証明書の警告メッセージが表示されますので「はい」を選択します。
+
+.. figure:: images/mod5-2-1-8.png
+   :scale: 20%
+   :align: center
+
+- F5 Networks Networks Access Helperの利用を許可します。 (Windowsのユーザアカウント制御の設定によって表示の有無が変わります。)
+
+.. figure:: images/mod5-2-1-9.png
+   :scale: 20%
+   :align: center
+
+- 認証完了後、以下の画面が表示され、タスクバーにF5 Helper Applicationのアイコンが表示されます。
+
+.. figure:: images/mod5-2-1-10.png
+   :scale: 20%
+   :align: center
+
+.. figure:: images/mod5-2-1-10.png
+   :scale: 20%
+   :align: center
 
 
-確認ができたら、次項以降のテストのために、Persistance ProfileをVirtual Serverの設定からはずします。
+- Webブラウザから、以下の社内ネットワークのWebサーバへ直接通信ができることを確認します。また、下記IPアドレスにSSH接続 (ポート22番)できることを確認します。
+
+| **http://10.1.20.201**	
+| **http://10.1.20.202**
+
+＜ご参考＞
+　F5 Helper Applicationのアンインストールは、コントロールパネルのアプリのインストール機能より“BIG-IP Edge Client Components”を選択する事で可能です。
