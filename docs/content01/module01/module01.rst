@@ -5,7 +5,7 @@ APMのネットワークアクセスは、以下のような流れで動作し�
 
 
 .. figure:: images/mod1-1.png
-   :scale: 50%
+   :scale: 70%
    :align: center
 
 
