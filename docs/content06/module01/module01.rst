@@ -83,33 +83,83 @@ b)	独自の認証局（例：OpenSSLの利用）を建てて、発行する
    :scale: 20%
    :align: center
 
-User-Agentをログ上で確認
+BIG-IPの設定
 --------------------------------------
 
-- 以下のコマンドを実行します。
+クライアント証明書認証に必要な、BIG-IPの設定を示します。
 
+認証局の証明書のインポート
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-上図1-6のIPアドレスが必要になりますので、あらかじめご用意ください。
+- あらかじめ、認証局の証明書を、BIG-IPの設定用GUIへアクセスするPCにコピーしておきます。 (F5 LAB環境では以下を利用します。)
 
-.. code-block:: bash
+認証局ファイル: **cacert.pem**
 
-   [root@bigXXX:Active:Standalone] config # tail –f /var/log/ltm
+- 「System」 → 「Certificate Management」 → 「Traffic Certificate Management」 →「SSL Certificate List」で表示された画面右上の「Import」ボタンを押し、Certificateを選択します。
 
+.. figure:: images/mod6-1-3-1-1.png
+   :scale: 20%
+   :align: center
 
-- クライアントPCで、iRuleを設定したVirutal Serverへ、ChromeおよびFirefoxから以下2つのブラウザからアクセスします。
+- 以下のように設定し、Importボタンを押します。
 
-- /var/log/ltmに、以下のようなログ (例)が出力されます。
-**Chromeの場合**
+.. figure:: images/mod6-1-3-1-2.png
+   :scale: 20%
+   :align: center
 
-.. code-block:: bash
+- 以下の状態になります。
 
-   Jun 27 17:44:11 big50 info tmm1[9735]: Rule /Common/User-Agent_check <HTTP_REQUEST>: USER-AGENT is mozilla/5.0 (windows nt 10.0; win64; x64) applewebkit/537.36 (khtml, like gecko) chrome/75.0.3770.142 safari/537.36
+.. figure:: images/mod6-1-3-1-3.png
+   :scale: 20%
+   :align: center
 
+Client SSL Profileの設定
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**Firefoxの場合**
+「SSLサーバ証明書の設定」で生成した、Client SSL Profileを編集します。「Local Traffic」 → 「Profile」 → 「SSL」 → 「Client」で、該当するProfileをクリックすると、以下の画面が現れます。以下の通り設定します。
 
-.. code-block:: bash
-   
-   Jun 27 17:43:53 big50 info tmm1[9735]: Rule /Common/User-Agent_check <HTTP_REQUEST>: USER-AGENT is mozilla/5.0 (windows nt 10.0; wow64; rv:65.0) gecko/20100101 firefox/68.0
+.. figure:: images/mod6-1-3-2.png
+   :scale: 20%
+   :align: center
 
+VPE (Visual Policy Editor)の設定
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+クライアント証明書認証を実施するための設定をVPEに反映します。
+
+- 「Access」→「Profiles / Policies」で表示されたNetAccess-001のEditをクリックしてVPEを表示します。
+
+.. figure:: images/mod6-1-3-3-1.png
+   :scale: 20%
+   :align: center
+
+- ここまでの設定では、VPEは以下の状態になっています。Logon Pageの前にある「+」をクリックします。
+
+.. figure:: images/mod6-1-3-3-2.png
+   :scale: 20%
+   :align: center
+
+- 「Authentication」タブの「On-Demand Cert Auth」にチェックを入れ、「Add Item」ボタンを押します。
+
+.. figure:: images/mod6-1-3-3-3.png
+   :scale: 20%
+   :align: center
+
+- 「Auth Mode」を「Require」に変更し、「Save」ボタンを押します。
+
+.. figure:: images/mod6-1-3-3-4.png
+   :scale: 20%
+   :align: center
+
+- 「Apply Access Policy」を押します。
+
+.. figure:: images/mod6-1-3-3-5.png
+   :scale: 20%
+   :align: center
+
+クライアントからのアクセス
+--------------------------------------
+
+- クライアントPCから、APM VSへアクセスします。
+- クライアント証明書の選択画面が出たら、該当する証明書をクリックします。
+- ユーザ名とパスワードを入力し、APMへのアクセスが完了することを確認します。
