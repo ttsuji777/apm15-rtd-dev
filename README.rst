@@ -1,10 +1,10 @@
 .. You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-BIG-IP Local Traffic Manager (LTM) v15.1 簡単セットアップガイド
-==============================================
+BIG-IP Access Policy Manager (APM) v15.1 ネットワークアクセス 簡単セットアップガイド 初級&中級編
+============================================================================================
 
-本ドキュメントでは、BIG-IP Local Traffic Manager (LTM)の設定方法について解説します。
+本ドキュメントでは、BIG-IP Access Policy Manager (APM)の設定方法について解説します。
 
 はじめに
 --------------------------------
@@ -13,7 +13,7 @@ F5のオフィシャルなドキュメントはこちらにございます。
 
 - AskF5: https://support.f5.com/csp/home
 - F5 Cloud Docs: https://clouddocs.f5.com/
-- F5 DevCentral（コミュニティ）: https://devcentral.f5.com/
+- F5 DevCentral（コミュニティ）: https://community.f5.com/
 
 
 コンテンツ
@@ -22,9 +22,8 @@ F5のオフィシャルなドキュメントはこちらにございます。
 
 
 - BIG-IPの初期設定
-- ロードバランシング設定
-- iRulesの基本的な使い方
-- 設定の保存とリストア
+- クライアント証明書認証
+- VPE (Visual Policy Editor)設定
 - 冗長構成
 
 .. note::

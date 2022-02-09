@@ -1,64 +1,88 @@
-HTTP (Port 80)のロードバランシング設定
+ウィザードを使って設定する方法
 ======================================
 
-Poolの作成
---------------------------------------
+ウィザード (Wizards)を利用すると、ネットワークアクセス設定に必要な情報が一通りそろっていれば、簡単に10分程度で設定することができます。
 
-まず、Poolから作成します。Poolは、ロードバランス対象の複数サーバの集合を指します。
+- 「Wizards」 → 「Device Wizards」で、「Network Access Setup …」を選択し、「Next」を押します。
 
-- 「Local Traffic」 → 「Pools」で表示された画面の右上にある「Create」ボタンを押します。
-
-.. figure:: images/mod5-1-1-1.png
+.. figure:: images/mod5-1-1.png
    :scale: 20%
    :align: center
 
-- Poolが作成されると、以下の状態になります。
+- 以下の情報を入力 (または選択)し、「Next」を押します。。
 
-.. figure:: images/mod5-1-1-2.png
-   :scale: 50%
-   :align: center
-
-- 作成した「http-pool-01」をクリックし、「Members」タブをクリックします。以下のように、Statusがグリーンであればヘルスモニターが成功しています。
-
-.. figure:: images/mod5-1-1-3.png
+.. figure:: images/mod5-1-2.png
    :scale: 20%
    :align: center
 
-HTTP (80)のVirtual Serverの作成
---------------------------------------
+- Time Server (NTP)のIPアドレスを入力し、「Next」を押します。 (DNSは設定済みなので入力は不要です。)
 
-次にHTTP Virtual Server (Port 80)を作成します。
-
-- 「Local Traffic」 → 「Virtual Servers」で表示された画面の右上にある「Create」ボタンを押して表示された画面で、以下のように設定します。　
-
-.. figure:: images/mod5-1-2-1.png
-   :scale: 30%
-   :align: center
-
-(中略)
-
-.. figure:: images/mod5-1-2-2.png
+.. figure:: images/mod5-1-3.png
    :scale: 20%
    :align: center
 
-- Statusがグリーンであれば、正常に動作していることを示します。
+- 利用する認証サーバ (Active Directory)を選択し、「Next」を押します。
 
-.. figure:: images/mod5-1-2-3.png
+.. figure:: images/mod5-1-4.png
    :scale: 20%
    :align: center
 
-.. _client:
+- Active Directoryによる認証に必要な情報を入力し、「Next」を押します。 (Local User DBを利用する場合、「No Authentication」を選択しますので、このステップはありません。)
 
-クライアントからのHTTPアクセス
---------------------------------------
-
-- テスト用クライアントから、作成したVirtual ServerへWebブラウザでアクセスし、Web画面が表示されることを確認します。
-- 「Statistics」 → 「Module Statistics」 → 「Local Traffic」タブをクリックします。
-- 「Statistics Type」のプルダウンメニューから、「Pools」を選択します。
-- それぞれのWebサーバの、Bits, Packets等のカウントがアップしていることを確認し、ロードバランシングが正常に行われていることを確認します。
-
-.. figure:: images/mod5-1-3-1.png
+.. figure:: images/mod5-1-5.png
    :scale: 20%
    :align: center
 
-カウンタをリセットしたい場合には、「Status」左横のチェックボックスにチェックを入れて、「Reset」ボタンを押します。
+- IPアドレスプールを設定し、「Next」を押します。
+
+.. figure:: images/mod5-1-6.png
+   :scale: 20%
+   :align: center
+
+- スプリット・トンネルを設定し、「Next」を押します。
+
+.. figure:: images/mod5-1-7.png
+   :scale: 20%
+   :align: center
+
+＜スプリット・トンネルとは＞
+
+SSL-VPNトンネルを使う通信と、使わない通信を分けたいときに使います。
+
+例えば、以下のような要件があったとします。
+①	社内LANのサーバは10.99.2.0/24と10.99.100.0/24に設置されているのでSSL-VPNトンネルを使いたい。
+②	しかし、同時にインターネットも使いたい。
+
+このような要件を実現するのがスプリット・トンネルです。
+
+.. figure:: images/mod5-1-8.png
+   :scale: 20%
+   :align: center
+
+「Use split Tunnelling for Traffic」を選択し、トンネルに向かわせたいネットワーク帯を指定することで、そのネットワークだけはSSL-VPNトンネルを通り、それ以外はクライアントIP (上図の1.1.1.1)を使ってインターネット (上図3.3.3.3のwebサーバへの通信)を使う、ということが可能になります。
+
+- クライアントPCに割り当てたい情報を設定し、「Next」を押します。
+
+.. figure:: images/mod5-1-9.png
+   :scale: 20%
+   :align: center
+
+- Virtual Serverを設定します。
+
+.. figure:: images/mod5-1-10.png
+   :scale: 20%
+   :align: center
+
+※このチェックボックスを有効にすることで、HTTP (80)でVirtual Serverへアクセスしても、自動的にHTTPS (443)へリダイレクトするVirtual Serverが生成されます。
+
+- 設定のレビュー (確認のみ)です。
+
+.. figure:: images/mod5-1-11.png
+   :scale: 20%
+   :align: center
+
+- 設定のサマリ (こちらも確認のみ)です。
+
+.. figure:: images/mod5-1-12.png
+   :scale: 20%
+   :align: center
