@@ -10,7 +10,7 @@
 
 -  サーバ証明書をBIG-IPにインポートしただけでは不十分です。このままでは、まだ、以下の画面を見ることになります。(例: Chrome)
 
-.. figure:: images/mod5-4.png
+.. figure:: images/mod5-4-1-1.png
    :scale: 50%
    :align: center
 
@@ -19,7 +19,7 @@
 |
 | リモートデスクトップ接続したPCのデスクトップ上にある、以下のフォルダを開いてください。
 
-.. figure:: images/mod5-3-1-1.png
+.. figure:: images/mod5-4-1-2.png
    :scale: 100%
    :align: center
 
@@ -33,63 +33,63 @@
 
 - クライアントPCのWebブラウザ (例: Chrome)へインポートします。Chromeの設定画面で、証明書の管理を選択します。
 
-.. figure:: images/mod5-4-1-1.png
+.. figure:: images/mod5-4-1-3.png
    :scale: 20%
    :align: center
 
 - 信頼されたルート証明機関」タブを選択し、「インポート」ボタンを押して下ださい。
 
-.. figure:: images/mod5-4-1-2.png
+.. figure:: images/mod5-4-1-4.png
    :scale: 20%
    :align: center
 
 - 「次へ」を押して下さい。
 
-.. figure:: images/mod5-4-1-3.png
+.. figure:: images/mod5-4-1-5.png
    :scale: 20%
    :align: center
 
 - インポートするファイルとして、認証局の証明書 (cacert.pem)を選び、「次へ」を押してください。
 
-.. figure:: images/mod5-4-1-4.png
+.. figure:: images/mod5-4-1-6.png
    :scale: 20%
    :align: center
 
 .. note::
    .pemファイルはデフォルトでは表示されないかもしれません。その場合は、「すべてのファイル (*.*)」を選択して下さい。
 
-   .. figure:: images/mod5-4-1-4-note.png
+   .. figure:: images/mod5-4-1-6-note.png
       :scale: 20%
       :align: center
 
 
 - 証明書ストアが「信頼されたルート証明機関」であることを確認し、「次へ」を押してください。
 
-.. figure:: images/mod5-4-1-5.png
+.. figure:: images/mod5-4-1-7.png
    :scale: 20%
    :align: center
 
 - 「完了」を押してください。
 
-.. figure:: images/mod5-4-1-6.png
+.. figure:: images/mod5-4-1-8.png
    :scale: 20%
    :align: center
 
 - 以下のようなセキュリティ警告が表示された場合、ここでは「はい」を選択します。
 
-.. figure:: images/mod5-4-1-7.png
+.. figure:: images/mod5-4-1-9.png
    :scale: 20%
    :align: center
 
 - 完了です。「OK」を押してください。
 
-.. figure:: images/mod5-4-1-8.png
+.. figure:: images/mod5-4-1-10.png
    :scale: 20%
    :align: center
 
 - 「信頼されたルート証明機関」に、(f5jca.f5jp.local)のルート証明書がインポートされました。
 
-.. figure:: images/mod5-4-1-9.png
+.. figure:: images/mod5-4-1-11.png
    :scale: 20%
    :align: center
 
@@ -101,7 +101,7 @@
 
 - DNSによる名前解決ができない環境の場合、URLとしてIPアドレスを入力することになります。この場合、クライアントPCへ認証局の証明書をインポートしても、引き続き、以下の画面が表示されます。
 
-.. figure:: images/mod5-4.png
+.. figure:: images/mod5-4-1-1.png
    :scale: 50%
    :align: center
 
@@ -124,6 +124,8 @@
    :align: center
 
 Webブラウザへ入力するURLは、IPアドレスではなくFQDN (https://www.abc-company.com)で入力します。これで、SSL証明書のセキュリティ警告を見ることなく、BIG-IPのVirtual Server経由でWebサーバへ接続することができます。
+
+.. _client:
 
 クライアントからのHTTPSアクセス
 --------------------------------------

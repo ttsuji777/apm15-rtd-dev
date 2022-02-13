@@ -24,7 +24,7 @@ Traffic-group-1のActive/Standbyの切替え
    :scale: 20%
    :align: center
 
-StandbyだったBIG-IPはActiveになります (※big40.f5jp.localで確認)。
+- StandbyだったBIG-IPはActiveになります (※big40.f5jp.localで確認)。
 
 .. figure:: images/mod7-9-1-4.png
    :scale: 20%

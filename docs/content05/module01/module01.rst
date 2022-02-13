@@ -45,17 +45,18 @@
    :scale: 20%
    :align: center
 
-＜スプリット・トンネルとは＞
+スプリット・トンネルとは
+---------------------------
 
 SSL-VPNトンネルを使う通信と、使わない通信を分けたいときに使います。
 
 例えば、以下のような要件があったとします。
-①	社内LANのサーバは10.99.2.0/24と10.99.100.0/24に設置されているのでSSL-VPNトンネルを使いたい。
-②	しかし、同時にインターネットも使いたい。
+| 1.	社内LANのサーバは10.99.2.0/24と10.99.100.0/24に設置されているのでSSL-VPNトンネルを使いたい。
+| 2.	しかし、同時にインターネットも使いたい。
 
 このような要件を実現するのがスプリット・トンネルです。
 
-.. figure:: images/mod5-1-8.png
+.. figure:: images/mod5-1-1-1.png
    :scale: 20%
    :align: center
 
@@ -63,13 +64,13 @@ SSL-VPNトンネルを使う通信と、使わない通信を分けたいとき�
 
 - クライアントPCに割り当てたい情報を設定し、「Next」を押します。
 
-.. figure:: images/mod5-1-9.png
+.. figure:: images/mod5-1-1-2.png
    :scale: 20%
    :align: center
 
 - Virtual Serverを設定します。
 
-.. figure:: images/mod5-1-10.png
+.. figure:: images/mod5-1-1-3.png
    :scale: 20%
    :align: center
 
@@ -77,12 +78,12 @@ SSL-VPNトンネルを使う通信と、使わない通信を分けたいとき�
 
 - 設定のレビュー (確認のみ)です。
 
-.. figure:: images/mod5-1-11.png
+.. figure:: images/mod5-1-1-4.png
    :scale: 20%
    :align: center
 
 - 設定のサマリ (こちらも確認のみ)です。
 
-.. figure:: images/mod5-1-12.png
+.. figure:: images/mod5-1-1-5.png
    :scale: 20%
    :align: center

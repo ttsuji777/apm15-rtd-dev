@@ -62,8 +62,8 @@ Deviceの設定
 .. note::
    APMの冗長の詳細に関しては、以下のKBを参考にして下さい。
    
-   K15503: BIG-IP APM HA considerations
-   https://support.f5.com/csp/article/K15503
+   | K15503: BIG-IP APM HA considerations
+   | https://support.f5.com/csp/article/K15503
 
 
 

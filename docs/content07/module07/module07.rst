@@ -39,8 +39,7 @@ Virtual ServerとTraffic-Groupの紐付け (確認)
 ----------------------------------------------
 
 - 「Local Traffic」→「Virtual Servers」→「Virtual Address List」を選択します。
-
-このPropertiesのTraffic Groupで、「traffic-group-1」が選択されていることを確認します。
+- このPropertiesのTraffic Groupで、「traffic-group-1」が選択されていることを確認します。
 
 .. figure:: images/mod7-7-3.png
    :scale: 20%

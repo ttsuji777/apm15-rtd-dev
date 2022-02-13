@@ -15,13 +15,13 @@ Active Directoryユーザ: test1001 (F5 UDF Labの場合の例)
 - 全般
 
 .. figure:: images/mod6-4-2-1.png
-   :scale: 20%
+   :scale: 70%
    :align: center
 
 - 所属するグループ: test1001は、CorpA-Groupに属しています。このCorpA-Groupに対して、ACLを割当てる設定を行います。
 
 .. figure:: images/mod6-4-2-2.png
-   :scale: 20%
+   :scale: 70%
    :align: center
 
 VPEの設定
@@ -190,4 +190,5 @@ F5 UDF Lab環境では必要ありません。あくまでご参考情報とな�
 
 
 K11308: Overview of the adtest tool
+
 https://support.f5.com/csp/article/K11308

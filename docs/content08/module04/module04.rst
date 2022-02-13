@@ -9,11 +9,15 @@ APM用Virtual Serverの設定
 .. figure:: images/mod8-4-1-1.png
    :scale: 20%
    :align: center
+
 (中略)
+
 .. figure:: images/mod8-4-1-2.png
    :scale: 20%
    :align: center
+
 (中略)
+
 .. figure:: images/mod8-4-1-3.png
    :scale: 20%
    :align: center
@@ -26,7 +30,9 @@ HTTP (80)でアクセスしても、APM用Virtual Server (HTTPS (443))へリダ�
 .. figure:: images/mod8-4-2-1.png
    :scale: 20%
    :align: center
+
 (中略)
+
 .. figure:: images/mod8-4-2-2.png
    :scale: 20%
    :align: center
@@ -39,5 +45,5 @@ HTTP (80)でアクセスしても、APM用Virtual Server (HTTPS (443))へリダ�
 クライアントPCから、設定したVirtual Serverへのアクセスが完了することを確認します。
 
 .. figure:: images/mod8-4-3.png
-   :scale: 20%
+   :scale: 70%
    :align: center

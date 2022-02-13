@@ -136,7 +136,7 @@ VPE (Visual Policy Editor)の設定
 - ここまでの設定では、VPEは以下の状態になっています。Logon Pageの前にある「+」をクリックします。
 
 .. figure:: images/mod6-1-3-3-2.png
-   :scale: 20%
+   :scale: 50%
    :align: center
 
 - 「Authentication」タブの「On-Demand Cert Auth」にチェックを入れ、「Add Item」ボタンを押します。

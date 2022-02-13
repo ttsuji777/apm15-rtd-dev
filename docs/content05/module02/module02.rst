@@ -20,7 +20,7 @@ WindowsのWebブラウザからのアクセス
 - 認証フォーム画面が現れますので、Active Directoryに登録されているユーザ名とパスワードを入力します。
 
 .. figure:: images/mod5-2-1-2.png
-   :scale: 20%
+   :scale: 70%
    :align: center
 
 - 初回アクセス時には、SSL-VPNクライアント用のクライアントコンポーネントをインストールする必要があります。ダウンロードボタンを押して、実行します。 (インストールには管理者権限が必要となります。) インストールが完了後、”ここをクリックしてください。”をクリックします。
@@ -66,18 +66,14 @@ WindowsのWebブラウザからのアクセス
 - 認証完了後、以下の画面が表示され、タスクバーにF5 Helper Applicationのアイコンが表示されます。
 
 .. figure:: images/mod5-2-1-10.png
-   :scale: 20%
+   :scale: 70%
    :align: center
-
-.. figure:: images/mod5-2-1-10.png
-   :scale: 20%
-   :align: center
-
 
 - Webブラウザから、以下の社内ネットワークのWebサーバへ直接通信ができることを確認します。また、下記IPアドレスにSSH接続 (ポート22番)できることを確認します。
 
 | **http://10.1.20.201**	
 | **http://10.1.20.202**
 
-＜ご参考＞
-　F5 Helper Applicationのアンインストールは、コントロールパネルのアプリのインストール機能より“BIG-IP Edge Client Components”を選択する事で可能です。
+.. note::
+F5 Helper Applicationのアンインストールは、コントロールパネルのアプリのインストール機能より“BIG-IP Edge Client Components”を選択する事で可能です。
+

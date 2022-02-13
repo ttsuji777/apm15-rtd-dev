@@ -5,7 +5,7 @@
 
 
 .. figure:: images/mod2-2.png
-   :scale: 20%
+   :scale: 70%
    :align: center
 
 

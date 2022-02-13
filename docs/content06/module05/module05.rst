@@ -37,7 +37,7 @@
 - 以下のようになります。
 
 .. figure:: images/mod6-5-6.png
-   :scale: 20%
+   :scale: 50%
    :align: center
 
 - Client OSのチェック対象を減らしたい場合は、「Client OS」の「Branch Rules」タブでチェックしないOSを削除します。今回の例ではWindows RTとLinuxを削除します。
@@ -46,7 +46,7 @@
    :scale: 20%
    :align: center
 
-- iOS設定には、「Logon Page」、「AD Auth」、「Advanced Resource Assign」のみ追加してみました。最後に、「Apply Access Policy」をクリックして、設定を適用します。 
+- iOS設定には「Logon Page」、「AD Auth」、「Advanced Resource Assign」のみ追加してみました。最後に「Apply Access Policy」をクリックして、設定を適用します。 
 
 .. figure:: images/mod6-5-8.png
    :scale: 20%
