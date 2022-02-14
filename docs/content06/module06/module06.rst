@@ -104,7 +104,7 @@ AD認証の誤り回数カウント
 - 今度は、誤ったパスワードで、3回程度アクセスしてみます。以下のように、アクセスが拒否されたメッセージが表示されます。
 
 .. figure:: images/mod6-6-1-1-2.png
-   :scale: 70%
+   :scale: 100%
    :align: center
 
 - 「Access」 → 「Authentication」 → 「Local User DB」 → 「Users」を確認すると、ユーザ: test1001がロックアウトされていることが分かります。対象ユーザを選択して「Unlock User」をクリックすると解除が可能です。

@@ -37,7 +37,7 @@
 - 以下のようになります。
 
 .. figure:: images/mod6-5-6.png
-   :scale: 50%
+   :scale: 70%
    :align: center
 
 - Client OSのチェック対象を減らしたい場合は、「Client OS」の「Branch Rules」タブでチェックしないOSを削除します。今回の例ではWindows RTとLinuxを削除します。

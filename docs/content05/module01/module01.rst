@@ -57,7 +57,7 @@ SSL-VPNトンネルを使う通信と、使わない通信を分けたいとき�
 このような要件を実現するのがスプリット・トンネルです。
 
 .. figure:: images/mod5-1-1-1.png
-   :scale: 20%
+   :scale: 70%
    :align: center
 
 「Use split Tunnelling for Traffic」を選択し、トンネルに向かわせたいネットワーク帯を指定することで、そのネットワークだけはSSL-VPNトンネルを通り、それ以外はクライアントIP (上図の1.1.1.1)を使ってインターネット (上図3.3.3.3のwebサーバへの通信)を使う、ということが可能になります。
@@ -79,11 +79,11 @@ SSL-VPNトンネルを使う通信と、使わない通信を分けたいとき�
 - 設定のレビュー (確認のみ)です。
 
 .. figure:: images/mod5-1-1-4.png
-   :scale: 20%
+   :scale: 30%
    :align: center
 
 - 設定のサマリ (こちらも確認のみ)です。
 
 .. figure:: images/mod5-1-1-5.png
-   :scale: 20%
+   :scale: 30%
    :align: center

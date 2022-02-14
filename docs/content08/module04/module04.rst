@@ -45,5 +45,5 @@ HTTP (80)でアクセスしても、APM用Virtual Server (HTTPS (443))へリダ�
 クライアントPCから、設定したVirtual Serverへのアクセスが完了することを確認します。
 
 .. figure:: images/mod8-4-3.png
-   :scale: 70%
+   :scale: 100%
    :align: center

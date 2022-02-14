@@ -133,5 +133,5 @@ Webブラウザへ入力するURLは、IPアドレスではなくFQDN (https://w
 正式なサーバ証明書を利用することで、クライアントPCからVirutal Serverへのアクセス時に、警告が出なくなります。
 
 .. figure:: images/mod5-4-3.png
-   :scale: 20%
+   :scale: 100%
    :align: center

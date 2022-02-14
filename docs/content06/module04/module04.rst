@@ -15,13 +15,13 @@ Active Directoryユーザ: test1001 (F5 UDF Labの場合の例)
 - 全般
 
 .. figure:: images/mod6-4-2-1.png
-   :scale: 70%
+   :scale: 100%
    :align: center
 
 - 所属するグループ: test1001は、CorpA-Groupに属しています。このCorpA-Groupに対して、ACLを割当てる設定を行います。
 
 .. figure:: images/mod6-4-2-2.png
-   :scale: 70%
+   :scale: 100%
    :align: center
 
 VPEの設定
@@ -166,10 +166,10 @@ APMにログインしたときのユーザ名は、セッション変数:「sess
 クライアントからのアクセス
 --------------------------------------
 
-- クライアントPCから、CorpA-Groupに属するユーザ: "test1001"で、APMのVSへアクセスします。
+- クライアントPCから、CorpA-Groupに属するユーザ: "test1001"で、APMのVirtual Serverへアクセスします。
 - アクセス完了後、10.1.20.201のSSH (Port 22)へのアクセスだけがRejectされることを確認します。
-- クライアントPCから、CorpB-Groupに属するユーザ: "test1002"で、APMのVSへアクセスします。
-- CorpB-GroupにはACLが割り当てられていないので、すべてのアクセスが通過する (何もRejectされない)ことを確認します。
+- クライアントPCから、CorpB-Groupに属するユーザ: "test1002"で、APMのVirtual Serverへアクセスします。
+- CorpB-GroupにはACLが割り当てられていないので、すべてのアクセスが通過する (=何もRejectされない)ことを確認します。
 
 [ご参考] AD Queryがうまく行かない場合: AAA設定の変更
 ----------------------------------------------------

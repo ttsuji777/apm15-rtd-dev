@@ -7,7 +7,7 @@ VLAN設定
 - Standby機 (big40.f5jp.local)に設定されたVLANは以下のようになります。(Active機と同様です。)
 
 .. figure:: images/mod7-4-1.png
-   :scale: 50%
+   :scale: 40%
    :align: center
 
 Self-IP設定
