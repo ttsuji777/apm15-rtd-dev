@@ -2,7 +2,7 @@
 ======================================
 
 .. note::
-   F5 UDF Lab環境では、CA証明書はクライアントに設定済みです。hostsファイルも編集済みです。
+   F5 UDF Lab環境では、CA証明書はクライアントに設定済みです。
 
 
 認証局の証明書のインポート
@@ -117,21 +117,22 @@
    :scale: 20%
    :align: center
 
-- C:\Windows\System32\drivers\etc\hosts を編集します。(「hosts」デフォルト状態では表示されないかもしれません。その場合は「すべてのファイル(*.*)」を選択してください。) hostsに指定するアドレスは、設定したVirtual ServerのIPアドレスを指定してください。
+- C:\\Windows\\System32\\drivers\\etc\\hosts を編集します。hostsに指定するアドレスは、設定したVirtual ServerのIPアドレスを指定してください。
 
-.. figure:: images/mod5-4-2-2.png
+.. note::
+
+   「hosts」ファイルはデフォルト状態では表示されないかもしれません。その場合は「すべてのファイル(*.*)」を選択してください。)
+   
+   .. figure:: images/mod5-4-2-2.png
+      :scale: 20%
+      :align: center
+
+.. figure:: images/mod5-4-2-3.png
    :scale: 20%
    :align: center
 
 Webブラウザへ入力するURLは、IPアドレスではなくFQDN (https://www.abc-company.com)で入力します。これで、SSL証明書のセキュリティ警告を見ることなく、BIG-IPのVirtual Server経由でWebサーバへ接続することができます。
 
-.. _client:
-
-クライアントからのHTTPSアクセス
---------------------------------------
-
-正式なサーバ証明書を利用することで、クライアントPCからVirutal Serverへのアクセス時に、警告が出なくなります。
-
-.. figure:: images/mod5-4-3.png
-   :scale: 100%
+.. figure:: images/mod5-4-2-4.png
+   :scale: 20%
    :align: center

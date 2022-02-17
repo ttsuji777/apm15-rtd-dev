@@ -14,5 +14,9 @@
    [root@big50:Active:Standalone] config #
 
 
-- SSH Keyを設定してUDF Lab上のBIG-IPにアクセスする方法については、以下の情報をご参照ください。
-https://help.udf.f5.com/en/articles/3832165-how-to-join-an-f5-training-course
+.. note::
+
+   SSH Keyを設定してUDF Lab上のBIG-IPにアクセスする方法については、以下の情報をご参照ください。
+   
+   https://help.udf.f5.com/en/articles/3832165-how-to-join-an-f5-training-course
+

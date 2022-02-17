@@ -45,32 +45,38 @@
    :scale: 20%
    :align: center
 
-スプリット・トンネルとは
----------------------------
 
-SSL-VPNトンネルを使う通信と、使わない通信を分けたいときに使います。
+.. note::
 
-例えば、以下のような要件があったとします。
-| 1.	社内LANのサーバは10.99.2.0/24と10.99.100.0/24に設置されているのでSSL-VPNトンネルを使いたい。
-| 2.	しかし、同時にインターネットも使いたい。
+   **スプリット・トンネルとは？**
+   
+   SSL-VPNトンネルを使う通信と、使わない通信を分けたいときに使います。
+   
+   例えば、以下のような要件があったとします。
 
-このような要件を実現するのがスプリット・トンネルです。
+   | 1.	社内LANのサーバは10.99.2.0/24と10.99.100.0/24に設置されているのでSSL-VPNトンネルを使いたい。
+   | 2.	しかし、同時にインターネットも使いたい。
+   
+   このような要件を実現するのがスプリット・トンネルです。
+   
+   .. figure:: images/mod5-1-8.png
+      :scale: 70%
+      :align: center
+   
+   「Use split tunnelling for traffic」を選択し、トンネルに向かわせたいネットワーク帯を指定することで、そのネットワークへの通信のみSSL-VPNトンネルを通り、それ以外はクライアント自身のIPアドレス (上図の"1.1.1.1")を使ってインターネット (上図"3.3.3.3"のwebサーバへの通信)へアクセスする、ということが可能になります。
 
-.. figure:: images/mod5-1-1-1.png
-   :scale: 70%
-   :align: center
-
-「Use split Tunnelling for Traffic」を選択し、トンネルに向かわせたいネットワーク帯を指定することで、そのネットワークだけはSSL-VPNトンネルを通り、それ以外はクライアントIP (上図の1.1.1.1)を使ってインターネット (上図3.3.3.3のwebサーバへの通信)を使う、ということが可能になります。
 
 - クライアントPCに割り当てたい情報を設定し、「Next」を押します。
 
-.. figure:: images/mod5-1-1-2.png
+.. figure:: images/mod5-1-9.png
    :scale: 20%
    :align: center
 
+※ここに指定したDNSサフィックス宛の通信 (f5jp.local)はこのDNSサーバを利用する、という設定です。
+
 - Virtual Serverを設定します。
 
-.. figure:: images/mod5-1-1-3.png
+.. figure:: images/mod5-1-10.png
    :scale: 20%
    :align: center
 
@@ -78,12 +84,12 @@ SSL-VPNトンネルを使う通信と、使わない通信を分けたいとき�
 
 - 設定のレビュー (確認のみ)です。
 
-.. figure:: images/mod5-1-1-4.png
+.. figure:: images/mod5-1-11.png
    :scale: 30%
    :align: center
 
 - 設定のサマリ (こちらも確認のみ)です。
 
-.. figure:: images/mod5-1-1-5.png
+.. figure:: images/mod5-1-12.png
    :scale: 30%
    :align: center

@@ -111,7 +111,7 @@ Client SSL Profileの生成とVSへの割当て
    :scale: 20%
    :align: center
 
-- Virtual ServerへのClient SSL Profileを割り当てます。「Local Traffic」 → 「Virtual Servers」 を選択し、SSL-VPN接続用に設定したVirtual Server (NetAccess-001_vs)をクリックすると、以下の画面が表示されます。
+- Virtual ServerへのClient SSL Profileを割り当てます。「Local Traffic」 → 「Virtual Servers」 を選択し、SSL-VPN接続用に設定したVirtual Server (本ガイドの例では"NetAccess-001_vs")をクリックすると、以下の画面が表示されます。
 
 .. figure:: images/mod5-3-3-6.png
    :scale: 70%

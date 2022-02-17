@@ -1,15 +1,19 @@
 クライアントからのアクセス
 ======================================
 
-| CONSOLE又はRDPで、クライアントPCにログインします (ID/Passwordは両方ともuserです)。
-| SSL-VPN接続には、専用のクライアントソフトウェア (Edge Client)を利用した方法と、Webブラウザからアクセスする方式(F5 Helper Application)の2種類あります。
-| ここでは、Webブラウザから接続する方法を試します。
+CONSOLE又はRDPで、クライアントPCにログインします。
+
+.. note::
+   F5 UDF Labの場合、ID/Passwordは両方とも**user**です。
+
+
+SSL-VPN接続には、専用のクライアントソフトウェア (Edge Client)を利用した方法と、Webブラウザからアクセスする方式 (F5 Helper Application)の2種類あります。ここでは、Webブラウザから接続する方法を試します。
 
 WindowsのWebブラウザからのアクセス
 --------------------------------------
 
 | クライアントPCのWebブラウザから、設定したVirtual Server (10.1.10.60)へアクセスします。
-| Windows 10 + Chromeを使った場合の例です。
+| 以下は、Windows 10 + Chromeを使った場合の例です。
 
 - BIG-IPが持つデフォルトのサーバ証明書は、正式な認証局で取得したものではないため、クライアントPCのWebブラウザでVirtual Serverへアクセスすると以下のような警告が出ます。「詳細設定」→「10.1.10.60にアクセスする (安全ではありません)」を選択してアクセスします。
 
@@ -17,7 +21,7 @@ WindowsのWebブラウザからのアクセス
    :scale: 20%
    :align: center
 
-- 認証フォーム画面が現れますので、Active Directoryに登録されているユーザ名とパスワードを入力します。
+- 認証フォーム画面が現れますので、Active Directoryに登録されているユーザ名とパスワードを入力します。(:doc:`../../content02/module02/module02` を参照。)
 
 .. figure:: images/mod5-2-1-2.png
    :scale: 100%
@@ -69,11 +73,17 @@ WindowsのWebブラウザからのアクセス
    :scale: 70%
    :align: center
 
+.. figure:: images/mod5-2-1-11.png
+   :scale: 20%
+   :align: center
+
 - Webブラウザから、以下の社内ネットワークのWebサーバへ直接通信ができることを確認します。また、下記IPアドレスにSSH接続 (ポート22番)できることを確認します。
 
 | **http://10.1.20.201**	
 | **http://10.1.20.202**
 
 .. note::
-F5 Helper Applicationのアンインストールは、コントロールパネルのアプリのインストール機能より“BIG-IP Edge Client Components”を選択する事で可能です。
+   F5 Helper Applicationのアンインストールは、コントロールパネルのアプリのインストール機能より“BIG-IP Edge Client Components”を選択する事で可能です。
+   
+
 
