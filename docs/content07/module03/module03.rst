@@ -18,12 +18,15 @@ HA VLANのIP設定
 .. figure:: images/mod7-3-2.png
    :scale: 20%
    :align: center
-（※注) Allow Noneを選ぶとHAの通信も止めてしまい、HAが組めません。(ここでは**Allow Default**を選びます)
+
+.. note::
+   "Allow None"を選ぶとHAの通信も止めてしまい、HAが組めません。ここでは**Allow Default**を選びます。
+
 
 Deviceの設定
 --------------------------------------
 
-- 次に「Device Management」→「Devices」で、自分自身：big50.f5jp.local (Self)を選択します。
+- 次に「Device Management」→「Devices」で、自分自身: big50.f5jp.local (Self)を選択します。
 
 .. figure:: images/mod7-3-3-1.png
    :scale: 20%
@@ -53,7 +56,7 @@ Deviceの設定
    :scale: 20%
    :align: center
 
-- 「Mirroring」タブを選択し、HA VLANに指定したIPアドレスをプライマリに指定します。任意ですが、ここではSecondaryとして、Internal VLANに指定したIPアドレスを選択しています。選択後、「Update」を押します。
+- 「Mirroring」タブを選択し、HA VLANに指定したIPアドレスをプライマリに指定します。Secondaryは任意ですが、ここではInternal VLANに指定したIPアドレスを選択しています。選択後、「Update」を押します。
 
 .. figure:: images/mod7-3-3-6.png
    :scale: 20%

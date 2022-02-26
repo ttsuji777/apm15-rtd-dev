@@ -28,7 +28,7 @@ DNS/NTP設定
 Lease Poolの設定
 ----------------------------------------
 
-クライアントに割当てるIPアドレス群：リースプールを設定します。「Access」 → 「Connectivity / VPN」 → 「Network Access(VPN)」 → 「IPV4 Lease Pools」にて、「Create」ボタンを押します。
+クライアントに割当てるIPアドレス群：リースプールを設定します。「Access」 → 「Connectivity / VPN」 → 「Network Access (VPN)」 → 「IPV4 Lease Pools」にて、「Create」ボタンを押します。
 
 .. figure:: images/mod8-2-3.png
    :scale: 20%

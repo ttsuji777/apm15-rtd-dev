@@ -22,8 +22,7 @@ Floating IPの設定
 
 Floating IPは、Active機ダウン時にStandby機が引き継ぐ、自身に設定されたIPアドレス (Self IP)を指します。実サーバは、このIPアドレスをデフォルトゲートウェイに指定することで、Active/Standbyの切り替わり発生時にも、即座に通信を再開できます。
 
-- Internal VLAN側の共用IP (Floating IP)を追加設定します。
-- 「Network」→「Self IPs」で表示された画面右上の「Create」ボタンを押し、表示された画面で以下のように設定します。ここで、Traffic-group-1を選択することで、そのトラフィックグループに属させます。
+- Internal VLAN側の共用IP (Floating IP)を追加設定します。「Network」→「Self IPs」で表示された画面右上の「Create」ボタンを押し、表示された画面で以下のように設定します。ここで、Traffic-group-1を選択することで、そのトラフィックグループに属させます。
 
 .. figure:: images/mod7-7-2-1.png
    :scale: 20%

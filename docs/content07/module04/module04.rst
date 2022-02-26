@@ -1,6 +1,8 @@
 Standby機 (big40.f5jp.local)の設定
 ======================================
 
+:doc:`../../content03/content03` および :doc:`../../content04/content04` を参照して、Standby機もActive機と同様の初期設定、ネットワーク設定を行います。
+
 VLAN設定
 --------------------------------------
 
@@ -13,7 +15,7 @@ VLAN設定
 Self-IP設定
 --------------------------------------
 
-- Standby機 (big40.f5jp.local)に設定されたSelf IPアドレスは以下のようになります。
+- Standby機 (big40.f5jp.local)に設定されたSelf IPアドレスは以下のようになります。Port Lockdownの設定はActive機と同様に、external-ipは"Allow None"、internal-ipおよびHA-ipは"Allow Default"とします。
 
 .. figure:: images/mod7-4-2.png
    :scale: 20%

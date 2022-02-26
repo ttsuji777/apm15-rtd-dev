@@ -33,6 +33,6 @@ Traffic-group-1のActive/Standbyの切替え
 クライアントからの接続確認
 --------------------------------------
 
- :ref:`client` 参照。 
+:doc:`../../content05/module02/module02` 参照。 
 
 再度traffic-group-1の切替え、クライアントからの通信が復旧するかを確認してください。

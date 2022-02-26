@@ -15,7 +15,7 @@ Active機 (big50.f5jp.local)のみに行った設定を、Standby機 (big40.f5jp
    "Ⅱ","Device-Group-001 (任意の名前)","前項で作成したユーザ設定領域のデータをSyncします。"
 
 
-Ⅰは自動でSyncされますが、ⅡはデフォルトでマニュアルSyncの設定となっています。Ⅱは初回設定時、またはUCSファイルからデータをリストアした後にSyncを実施する必要があります。
+Ⅰは自動でSync (Auto Sync)されますが、ⅡはデフォルトでマニュアルSync (Manual Sync)の設定となっています。Ⅱは初回設定時、またはUCSファイルからデータをリストアした後にSyncを実施する必要があります。
 
 - 「Device Management」→「Overview」を選択します。Active機 (big50.f5jp.local)を選択し、「Sync」ボタンを押すことで、コンフィグ同期が行われます。
 
