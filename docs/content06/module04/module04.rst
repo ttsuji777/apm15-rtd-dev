@@ -182,9 +182,9 @@ Active Directory設定またはそのユーザ設定によっては、Administra
    F5 UDF Lab環境では必要ありません。あくまでご参考情報となります。
 
 
- 「Access」 → 「Authentication」 → 「Active Directory」 → 設定済みのAAAサーバをクリックすることで、以下の画面が現れます。以下の赤囲み部分を追加してみてください。
+「Access」 → 「Authentication」 → 「Active Directory」 → 設定済みのAAAサーバをクリックすることで、以下の画面が現れます。以下の赤囲み部分を追加してみてください。
 
- .. figure:: images/mod6-4-5.png
+.. figure:: images/mod6-4-5.png
    :scale: 20%
    :align: center
 

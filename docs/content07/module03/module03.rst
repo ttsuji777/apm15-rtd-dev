@@ -20,7 +20,7 @@ HA VLANのIP設定
    :align: center
 
 .. note::
-   "Allow None"を選ぶとHAの通信も止めてしまい、HAが組めません。ここでは**Allow Default**を選びます。
+   「Allow None」を選ぶとHAの通信も止めてしまい、HAが組めません。ここでは「Allow Default」を選びます。
 
 
 Deviceの設定

@@ -46,7 +46,7 @@ VPEの設定
 
 OU単位にACLを適用するために、VPEの設定を変更します。
 
-- 「Access」→「Profiles / Policies」で表示されたNetAccess-001のEditをクリックしてVPEを表示します。
+- 「Access」→「Profiles/Policies」で表示された"NetAccess-001"の「Edit」をクリックして、VPEを表示します。
 
 .. figure:: images/mod6-3-2-1.png
    :scale: 20%
@@ -96,7 +96,7 @@ OU単位にACLを適用するために、VPEの設定を変更します。
    :scale: 20%
    :align: center
 
-この例では、以下のように「Fallback」に「Asdvanced Resouce Assign」がつながっています。このままだと、OU=Systems Engineerでも、OU=Salesでもないものに対して、リソースがアサインされる状態になっていますので、これを変更します。「Fallback」の後ろにある「>>」のマークをクリックします。
+この例では、以下のように「Fallback」に「Advanced Resouce Assign」がつながっています。このままだと、OU=Systems Engineerでも、OU=Salesでもないものに対して、リソースがアサインされる状態になっていますので、これを変更します。「Fallback」の後ろにある「>>」のマークをクリックします。
 
 .. figure:: images/mod6-3-2-9.png
    :scale: 20%

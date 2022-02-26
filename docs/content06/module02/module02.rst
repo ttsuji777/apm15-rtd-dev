@@ -10,7 +10,7 @@ BIG-IP APMには、セッション変数 (Session Variables)という便利な�
 - 「Access」 → 「Overview」→ 「Access Reports」を選ぶと、以下の画面が現れます。「Run Report」ボタンを押します。
 
 .. figure:: images/mod6-2-1.png
-   :scale: 50%
+   :scale: 20%
    :align: center
 
 - アクセスしたLogonユーザの行に表示されている、「View Session Variables」をクリックします。

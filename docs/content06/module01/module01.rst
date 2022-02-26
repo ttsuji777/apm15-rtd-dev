@@ -29,8 +29,7 @@
 クライアントPCへのクライアント証明書インポート
 --------------------------------------
 
-クライアント証明書 (PKCS#12)をクライアントPCへインストールする手順について、参考までに記載します。
-本ガイドのクライアントPCはWindows10＋Chromeを利用しています。
+クライアント証明書 (PKCS#12)をクライアントPCへインストールする手順について、参考までに記載します。本ガイドのクライアントPCは、Windows10およびChromeを利用しています。
 
 - Chromeの設定画面で、証明書の管理を選択します。
 
@@ -124,7 +123,7 @@ Client SSL Profileの設定
 「SSLサーバ証明書の設定」で生成した、Client SSL Profileを編集します。「Local Traffic」 → 「Profile」 → 「SSL」 → 「Client」で、該当するProfileをクリックすると、以下の画面が現れます。以下の通り設定します。
 
 .. figure:: images/mod6-1-3-2.png
-   :scale: 40%
+   :scale: 30%
    :align: center
 
 VPE (Visual Policy Editor)の設定
@@ -172,4 +171,4 @@ VPE (Visual Policy Editor)の設定
    :scale: 20%
    :align: center
 
-- ユーザ名とパスワードを入力し、APMへのアクセス (SSL-VPN接続)が完了することを確認します。 (:doc:../../content05/module02/module02 を参照。)
+- ユーザ名とパスワードを入力し、APMへのアクセス (SSL-VPN接続)が完了することを確認します。 (:doc:`../../content05/module02/module02` を参照。)
