@@ -11,7 +11,7 @@
 | 1. 認証局の証明書: BIG-IP側で利用します。
 | 2. クライアント証明書: クライアントPC側で利用します。
 
-クライアント証明書の発行には、大きくは以下2つの方法があります。
+クライアント証明書の発行には、大きく以下2つの方法があります。
 
 | a) 商用の認証局 (Verisign、CyberTrust等)から発行してもらう
 | b) 独自の認証局 (例: OpenSSLの利用)を建てて、発行する
@@ -55,6 +55,14 @@
 .. figure:: images/mod6-1-2-4.png
    :scale: 20%
    :align: center
+
+.. note::
+   .p12ファイルはデフォルトでは表示されないかもしれません。その場合は、「すべてのファイル (*.*)」を選択して下さい。
+
+   .. figure:: images/mod6-1-2-4-note.png
+      :scale: 20%
+      :align: center
+
 
 - 秘密キーがパスワードで保護されているので、パスワードを入力して、「次へ」ボタンを押します。 (OpenSSLで発行する際に指定したパスワードは「f5demo」です。)
 
@@ -116,7 +124,7 @@ Client SSL Profileの設定
 「SSLサーバ証明書の設定」で生成した、Client SSL Profileを編集します。「Local Traffic」 → 「Profile」 → 「SSL」 → 「Client」で、該当するProfileをクリックすると、以下の画面が現れます。以下の通り設定します。
 
 .. figure:: images/mod6-1-3-2.png
-   :scale: 20%
+   :scale: 40%
    :align: center
 
 VPE (Visual Policy Editor)の設定
@@ -157,6 +165,11 @@ VPE (Visual Policy Editor)の設定
 クライアントからのアクセス
 --------------------------------------
 
-- クライアントPCから、APM Virtual Serverへアクセスします。
+- クライアントPCのWebブラウザから、APM Virtual Serverへアクセスします。
 - クライアント証明書の選択画面が出たら、該当する証明書をクリックします。
-- ユーザ名とパスワードを入力し、APMへのアクセスが完了することを確認します。
+
+.. figure:: images/mod6-1-4.png
+   :scale: 20%
+   :align: center
+
+- ユーザ名とパスワードを入力し、APMへのアクセス (SSL-VPN接続)が完了することを確認します。 (:doc:../../content05/module02/module02 を参照。)

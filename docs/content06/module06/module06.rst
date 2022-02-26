@@ -11,7 +11,7 @@ VPEには、マクロ機能があります。繰り返し利用されるポリ�
 AD認証の誤り回数カウント
 --------------------------------------
 
-- まず、ユーザエントリの存在しない、空のLocal User DBのInstanceを作ります。「Access」 → 「Authentication」 → 「Local User DB」 → 「Instances」で、左上の「Create New Instance」をクリックします。
+- まず、ユーザエントリの存在しない空のLocal User DBのInstanceを作ります。「Access」 → 「Authentication」 → 「Local User DB」 → 「Instances」で、右上の「Create New Instance」をクリックします。
 
 .. note::
    Local User DBの利用は少人数ユーザの場合や検証時に有効です。
@@ -50,7 +50,7 @@ AD認証の誤り回数カウント
    :scale: 20%
    :align: center
 
-- 「LocalDB - Read」をクリックすると、以下の画面が現れます。設定したDBインスタンス: AD_lockout_countsを選択し、「Save」ボタンを押します。
+- 「LocalDB - Read」をクリックすると、以下の画面が現れます。設定したDBインスタンス (この例では"AD_lockout_counts")を選択し、「Save」ボタンを押します。
 
 .. figure:: images/mod6-6-1-7.png
    :scale: 20%
@@ -62,13 +62,13 @@ AD認証の誤り回数カウント
    :scale: 20%
    :align: center
 
-- 「LocalDB - Write (Reset)」をクリックすると、以下の画面が現れます。設定したDBインスタンス: AD_lockout_countsを選択し、「Save」ボタンを押します。
+- 「LocalDB - Write (Reset)」をクリックすると、以下の画面が現れます。設定したDBインスタンス (この例では"AD_lockout_counts")を選択し、「Save」ボタンを押します。
 
 .. figure:: images/mod6-6-1-9.png
    :scale: 20%
    :align: center
 
-- 「LocalDB - Write (Incr)」をクリックすると、以下の画面が現れます。設定したDBインスタンス: AD_lockout_countsを選択し、「Save」ボタンを押します。
+- 「LocalDB - Write (Incr)」をクリックすると、以下の画面が現れます。設定したDBインスタンス (この例では"AD_lockout_counts")を選択し、「Save」ボタンを押します。
 
 .. figure:: images/mod6-6-1-10.png
    :scale: 20%

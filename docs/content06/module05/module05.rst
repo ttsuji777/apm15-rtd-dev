@@ -46,7 +46,7 @@
    :scale: 20%
    :align: center
 
-- iOS設定には「Logon Page」、「AD Auth」、「Advanced Resource Assign」のみ追加してみました。最後に「Apply Access Policy」をクリックして、設定を適用します。 
+- 例として、下図のようにiOS設定に「Logon Page」「AD Auth」「Advanced Resource Assign」を追加してみました。最後に「Apply Access Policy」をクリックして、設定を適用します。 
 
 .. figure:: images/mod6-5-8.png
    :scale: 20%

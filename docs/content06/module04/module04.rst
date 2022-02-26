@@ -12,13 +12,15 @@ ACLの作成
 Active Directoryユーザ: test1001 (F5 UDF Labの場合の例)
 -----------------------------------------------------------
 
-- 全般
+F5 UDF Labでは、Active Directoryのユーザー設定は以下の通りとなっています。
+
+- 「全般」タブ
 
 .. figure:: images/mod6-4-2-1.png
    :scale: 100%
    :align: center
 
-- 所属するグループ: test1001は、CorpA-Groupに属しています。このCorpA-Groupに対して、ACLを割当てる設定を行います。
+- 「所属するグループ」タブ: ユーザー"test1001"は、グループ"CorpA-Group"に属しています。このCorpA-Groupグループに対して、ACLを割当てる設定を行います。
 
 .. figure:: images/mod6-4-2-2.png
    :scale: 100%
@@ -39,7 +41,7 @@ VPEの設定
    :scale: 20%
    :align: center
 
-- 同様の手順で、「Empty」、「ACL Assign」、「Advanced Resource Assign」も削除し、以下の状態にします。「AD Auth」のSuccessful分岐上の「+」をクリックします。
+- 同様の手順で、「Empty」「ACL Assign」「Advanced Resource Assign」も削除し、以下の状態にします。「AD Auth」のSuccessful分岐上の「+」をクリックします。
 
 .. figure:: images/mod6-4-3-3.png
    :scale: 20%
@@ -115,7 +117,7 @@ APMにログインしたときのユーザ名は、セッション変数:「sess
    :scale: 20%
    :align: center
 
-- 「Groups」タブで、「New Group」にActive Directoryのグループ名を入力し、「Add」ボタンを押します。
+- 「Groups」タブで、「New Group」にActive Directoryのグループ名を入力し、「Add group manually」ボタンを押します。
 
 .. figure:: images/mod6-4-3-14.png
    :scale: 20%
@@ -177,7 +179,7 @@ APMにログインしたときのユーザ名は、セッション変数:「sess
 Active Directory設定またはそのユーザ設定によっては、Administrator権限が必要となる場合があります。その場合には、以下の部分を追加してみてください。
 
 .. note::
-F5 UDF Lab環境では必要ありません。あくまでご参考情報となります。
+   F5 UDF Lab環境では必要ありません。あくまでご参考情報となります。
 
 
  「Access」 → 「Authentication」 → 「Active Directory」 → 設定済みのAAAサーバをクリックすることで、以下の画面が現れます。以下の赤囲み部分を追加してみてください。
@@ -188,7 +190,5 @@ F5 UDF Lab環境では必要ありません。あくまでご参考情報とな�
 
 また、以下のKBに記載されているadtest toolを使うことによってADサーバとのクエリテストを行うことができます。
 
-
-K11308: Overview of the adtest tool
-
-https://support.f5.com/csp/article/K11308
+| K11308: Overview of the adtest tool
+| https://support.f5.com/csp/article/K11308
